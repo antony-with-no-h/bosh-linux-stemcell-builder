@@ -9,5 +9,5 @@ source $base_dir/lib/prelude_apply.bash
 sudo apt-get install --no-install-recommends -y libcurl4-openssl-dev libpcre2-dev libpcre3-dev libexpat1-dev libz-dev
 
 pushd ${base_dir}/gitaly
-make git
+sudo make git GIT_PREFIX=/usr/bin
 popd
