@@ -6,4 +6,6 @@ source $base_dir/lib/prelude_apply.bash
 
 pkg_mgr install libpcre2-dev
 
-run_in_chroot "$chroot" "pushd ${base_dir}/gitaly; make git; popd"
+pushd ${base_dir}/gitaly
+run_in_chroot "$chroot" "make git"
+popd
