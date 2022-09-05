@@ -13,6 +13,6 @@ run_in_chroot "$chroot" "apt update"
 
 pkg_mgr install gcc-9 g++-9
 
-for RELINK in gcc gcc-ar gcc-nm gcc-ranlib; do
+for RELINK in gcc gcc-ar gcc-nm gcc-ranlib g++; do
     run_in_chroot "$chroot" "pushd /usr/bin; ln -sf ${RELINK}-9 ${RELINK}; popd"
 done

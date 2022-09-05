@@ -29,7 +29,7 @@ module Bosh::Stemcell
             :base_ubuntu_packages,
             :base_file_permission,
             :base_ssh,
-            :gcc_9,
+            :git_gitaly,
             :bosh_sysstat,
             :bosh_environment,
             :bosh_sysctl,
