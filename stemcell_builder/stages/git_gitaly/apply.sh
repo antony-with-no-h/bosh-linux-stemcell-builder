@@ -4,9 +4,6 @@ set -ex
 base_dir=$(readlink -nf $(dirname $0)/../..)
 source $base_dir/lib/prelude_apply.bash
 
-pushd ${base_dir}/gitaly
+pkg_mgr install libpcre2-dev
 
-make git
-
-popd
-
+run_in_chroot "$chroot" "pushd ${base_dir}/gitaly; make git; popd"
